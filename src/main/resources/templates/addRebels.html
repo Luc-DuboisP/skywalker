@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add rebel</title>
+</head>
+<body>
+
+<h1>Créer un rebel:</h1>
+
+<form th:action="@{/addRebel}"
+      th:object="${rebelsForm}" method="POST">
+    Prénom:
+    <input type="text" th:field="*{firstName}" />
+    <br/>
+    Nom:
+    <input type="text" th:field="*{lastName}" />
+    <br/>
+    Date d'anniversaire:
+    <input type="date" th:field="*{birthDate}" />
+    <br/>
+    Numéro de permis de conduire:
+    <input type="number" th:field="*{licenseNumber}" />
+    <br/>
+    Date du permis de conduire:
+    <input type="date" th:field="*{licenseDate}" />
+    <br/>
+    <input type="submit" value="Create" />
+</form>
+
+</body>
+</html>
